@@ -1,0 +1,123 @@
+{
+  "id": "overall-architecture",
+  "label": "Overall Architecture",
+  "summary": "High-level view of the cotx-engine codebase showing major subsystems.",
+  "components": [
+    {
+      "id": "compiler",
+      "label": "Compiler Pipeline",
+      "kind": "group",
+      "directory": "src/compiler",
+      "children": ["module-compiler", "concept-compiler"],
+      "stats": {
+        "file_count": 8,
+        "function_count": 24,
+        "total_cyclomatic": 45,
+        "max_cyclomatic": 12,
+        "max_nesting_depth": 4,
+        "risk_score": 35
+      },
+      "description": "Transforms parsed AST data into semantic map layers.",
+      "diagram": "graph TD\nA[\"Parser\"]\nB[\"Module Compiler\"]\nA --> B"
+    },
+    {
+      "id": "parser",
+      "label": "Tree-sitter Parser",
+      "kind": "leaf",
+      "directory": "src/core/parser",
+      "files": [
+        "src/core/parser/index.ts",
+        "src/core/parser/type-env.ts",
+        "src/core/parser/call-processor.ts"
+      ],
+      "exported_functions": ["parseProject", "createTypeEnv", "resolveCallTargets"],
+      "contracts_provided": ["parse-output"],
+      "contracts_consumed": [],
+      "related_flows": ["compile-flow"],
+      "stats": {
+        "file_count": 14,
+        "function_count": 42,
+        "total_cyclomatic": 88,
+        "max_cyclomatic": 18,
+        "max_nesting_depth": 5,
+        "risk_score": 52
+      },
+      "description": "Multi-language source code parser using Tree-sitter grammars."
+    },
+    {
+      "id": "store",
+      "label": "YAML Store",
+      "kind": "leaf",
+      "directory": "src/store",
+      "files": [
+        "src/store/store.ts",
+        "src/store/schema.ts",
+        "src/store/architecture-store.ts"
+      ],
+      "exported_functions": ["readModule", "writeModule", "readMeta"],
+      "contracts_provided": ["store-api"],
+      "contracts_consumed": ["parse-output"],
+      "related_flows": ["compile-flow", "enrich-flow"],
+      "stats": {
+        "file_count": 4,
+        "function_count": 18,
+        "total_cyclomatic": 22,
+        "max_cyclomatic": 6,
+        "max_nesting_depth": 3,
+        "risk_score": 15
+      }
+    },
+    {
+      "id": "mcp",
+      "label": "MCP Server",
+      "kind": "leaf",
+      "directory": "src/mcp",
+      "files": [
+        "src/mcp/server.ts",
+        "src/mcp/tools.ts"
+      ],
+      "exported_functions": ["startMcpServer", "handleToolCall"],
+      "contracts_provided": [],
+      "contracts_consumed": ["store-api"],
+      "related_flows": ["serve-flow"],
+      "stats": {
+        "file_count": 3,
+        "function_count": 15,
+        "total_cyclomatic": 30,
+        "max_cyclomatic": 10,
+        "max_nesting_depth": 4,
+        "risk_score": 28
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "compiler",
+      "to": "parser",
+      "label": "reads AST",
+      "type": "dependency",
+      "weight": 5
+    },
+    {
+      "from": "compiler",
+      "to": "store",
+      "label": "writes nodes",
+      "type": "dependency",
+      "weight": 4
+    },
+    {
+      "from": "mcp",
+      "to": "store",
+      "label": "reads map",
+      "type": "dependency",
+      "weight": 3
+    },
+    {
+      "from": "parser",
+      "to": "store",
+      "label": "",
+      "type": "data_flow",
+      "weight": 2
+    }
+  ]
+}

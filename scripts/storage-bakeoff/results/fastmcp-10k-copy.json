@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-04-12T08:35:12.220Z",
+  "repo": "/data/dev/goalx_test/repos/fastmcp",
+  "maxNodes": 10000,
+  "maxEdges": 30000,
+  "loadMode": "copy",
+  "results": [
+    {
+      "adapter": "ladybug",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/fastmcp/mcp_config.py:_TransformingMCPServerMixin._to_server_and_underlying_transport",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 450.09
+      },
+      "results": {
+        "context": 6,
+        "impact": 45
+      }
+    },
+    {
+      "adapter": "kuzu",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/fastmcp/mcp_config.py:_TransformingMCPServerMixin._to_server_and_underlying_transport",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 874.41
+      },
+      "results": {
+        "context": 6,
+        "impact": 45
+      }
+    },
+    {
+      "adapter": "cozo",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/fastmcp/mcp_config.py:_TransformingMCPServerMixin._to_server_and_underlying_transport"
+      },
+      "metrics": {
+        "elapsed_ms": 533.08
+      },
+      "results": {
+        "context": 6,
+        "impact": 45
+      }
+    },
+    {
+      "adapter": "duckdb",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/fastmcp/mcp_config.py:_TransformingMCPServerMixin._to_server_and_underlying_transport"
+      },
+      "metrics": {
+        "elapsed_ms": 1859.04
+      },
+      "results": {
+        "context": 6,
+        "impact": 45
+      }
+    }
+  ]
+}

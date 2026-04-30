@@ -1,0 +1,21 @@
+{
+  "name": "cotx-storage-v2-bakeoff",
+  "private": true,
+  "type": "module",
+  "description": "Storage v2 candidate bakeoff for cotx-engine",
+  "scripts": {
+    "hybrid": "node hybrid-benchmark.mjs",
+    "adapter": "node query-adapter-benchmark.mjs",
+    "repo": "node repo-benchmark.mjs",
+    "smoke": "node smoke.mjs",
+    "sync": "node sync-benchmark.mjs",
+    "typed": "node typed-schema-benchmark.mjs"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "1.5.1-r.2",
+    "@ladybugdb/core": "0.15.3",
+    "cozo-node": "0.7.6",
+    "js-yaml": "^4.1.1",
+    "kuzu": "0.11.3"
+  }
+}

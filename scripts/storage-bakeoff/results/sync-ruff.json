@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-04-12T08:49:00.244Z",
+  "repo": "/data/dev/goalx_test/repos/ruff",
+  "limitPerLayer": 1000000,
+  "artifacts": {
+    "canonical": 2314,
+    "symmetry": 18697,
+    "closures": 6437,
+    "abstractions": 1399
+  },
+  "rowCounts": {
+    "canonical": 2314,
+    "canonical_entry": 3819,
+    "canonical_deviation": 20368,
+    "symmetry": 18697,
+    "closure": 6437,
+    "closure_member": 219066,
+    "abstraction": 1399,
+    "abstraction_unit": 5699
+  },
+  "timings": {
+    "parse_ms": 3101.81,
+    "schema_ms": 4.38,
+    "insert_ms": 1885.36,
+    "query_ms": 243.37,
+    "total_ms": 5237.12
+  },
+  "queryResults": {
+    "highConfidenceCanonical": 546,
+    "largeClosures": 3513,
+    "symmetryPartners": 0,
+    "abstractionTargets": 20
+  }
+}

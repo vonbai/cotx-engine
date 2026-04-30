@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-04-12T08:44:34.264Z",
+  "results": [
+    {
+      "adapter": "ladybug-primary+cozo-rules",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 269.16
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "hardClosure": 2,
+        "review": 1
+      },
+      "notes": [
+        "Cypher graph facts stay ergonomic for agents",
+        "Datalog sidecar naturally handles closure/review rules",
+        "Requires dual-store sync and query orchestration"
+      ]
+    },
+    {
+      "adapter": "cozo-primary+query-adapter",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 74.19
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "hardClosure": 2,
+        "review": 1,
+        "adapterTemplates": 4
+      },
+      "notes": [
+        "Single rule-capable store",
+        "Decision queries are natural",
+        "Agent ad-hoc graph query requires an adapter/template layer"
+      ]
+    },
+    {
+      "adapter": "ladybug-primary+duckdb-analytics",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 324.42
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "analyticsRows": 1
+      },
+      "notes": [
+        "Cypher graph facts stay primary",
+        "SQL sidecar handles tabular analytics and JSON-ish shape checks",
+        "Does not help rule/closure reasoning as much as Cozo"
+      ]
+    }
+  ]
+}

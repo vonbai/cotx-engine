@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-04-12T08:53:33.890Z",
+  "query_count": 9,
+  "adapters": {
+    "ladybug": {
+      "elapsed_ms": 285.9,
+      "templateStats": {
+        "templates": 9,
+        "total_chars": 992,
+        "avg_chars": 110
+      }
+    },
+    "cozo": {
+      "elapsed_ms": 70.42,
+      "templateStats": {
+        "templates": 9,
+        "total_chars": 1206,
+        "avg_chars": 134
+      }
+    }
+  },
+  "comparisons": {
+    "context": {
+      "expected": {
+        "rows": 1
+      },
+      "ladybug": {
+        "rows": 1
+      },
+      "cozo": {
+        "rows": 1
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "downstreamImpact": {
+      "expected": {
+        "rows": 2
+      },
+      "ladybug": {
+        "rows": 2
+      },
+      "cozo": {
+        "rows": 2
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "upstreamImpact": {
+      "expected": {
+        "rows": 3
+      },
+      "ladybug": {
+        "rows": 3
+      },
+      "cozo": {
+        "rows": 3
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "routeShape": {
+      "expected": {
+        "mismatches": [
+          "missing"
+        ]
+      },
+      "ladybug": {
+        "mismatches": [
+          "missing"
+        ]
+      },
+      "cozo": {
+        "mismatches": [
+          "missing"
+        ]
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "toolMap": {
+      "expected": {
+        "rows": 1
+      },
+      "ladybug": {
+        "rows": 1
+      },
+      "cozo": {
+        "rows": 1
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "processTrace": {
+      "expected": {
+        "rows": 3
+      },
+      "ladybug": {
+        "rows": 3
+      },
+      "cozo": {
+        "rows": 3
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "canonicalForConcern": {
+      "expected": {
+        "rows": 1
+      },
+      "ladybug": {
+        "rows": 1
+      },
+      "cozo": {
+        "rows": 1
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "closureForUnit": {
+      "expected": {
+        "rows": 2
+      },
+      "ladybug": {
+        "rows": 2
+      },
+      "cozo": {
+        "rows": 2
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    },
+    "reviewForPlan": {
+      "expected": {
+        "rows": 1
+      },
+      "ladybug": {
+        "rows": 1
+      },
+      "cozo": {
+        "rows": 1
+      },
+      "ladybug_ok": true,
+      "cozo_ok": true,
+      "parity": true
+    }
+  },
+  "conclusion_signal": {
+    "cozo_requires_adapter_templates": 9,
+    "cypher_supports_agent_ad_hoc_queries_directly": true,
+    "cozo_supports_agent_ad_hoc_queries_directly": false
+  }
+}

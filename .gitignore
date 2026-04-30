@@ -1,0 +1,45 @@
+# Reference materials and design docs (local-only during iteration)
+example/
+docs/
+CLAUDE.md
+AGENTS.md
+.claude/
+
+# Compiled semantic map (generated output)
+.cotx/
+.worktrees/
+
+# Build artifacts
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependencies
+node_modules/
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.db
+*.sqlite
+
+# Temporary files
+.playwright-mcp/
+.superpowers/
+playwright-report/
+test-results/
+*.png
+.gitnexus
+.cotx-pre-agentic/

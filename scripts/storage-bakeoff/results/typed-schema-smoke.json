@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-04-12T08:40:15.334Z",
+  "results": [
+    {
+      "adapter": "ladybug",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 267.08
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "review": 1
+      },
+      "notes": [
+        "typed node tables",
+        "typed relation tables",
+        "cypher"
+      ]
+    },
+    {
+      "adapter": "kuzu",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 331.76
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "review": 1
+      },
+      "notes": [
+        "typed node tables",
+        "typed relation tables",
+        "cypher"
+      ]
+    },
+    {
+      "adapter": "cozo",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 83.12
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "review": 1
+      },
+      "notes": [
+        "typed relations",
+        "datalog"
+      ]
+    },
+    {
+      "adapter": "duckdb",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 166.78
+      },
+      "results": {
+        "context": 1,
+        "routeShapeMismatches": [
+          "missing"
+        ],
+        "toolMap": 1,
+        "processTrace": 3,
+        "closure": 2,
+        "review": 1
+      },
+      "notes": [
+        "typed SQL tables",
+        "recursive graph queries require SQL patterns"
+      ]
+    }
+  ]
+}

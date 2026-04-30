@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "..",
+    "baseUrl": ".",
+    "paths": {
+      "cotx-sdk-core": ["../cotx-sdk-core/src/index.ts"]
+    }
+  }
+}

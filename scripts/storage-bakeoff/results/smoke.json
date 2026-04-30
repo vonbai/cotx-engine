@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-04-12T08:28:51.236Z",
+  "results": [
+    {
+      "adapter": "ladybug",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 115.55
+      },
+      "results": {
+        "context": 1,
+        "impact": 2,
+        "routeShape": 1,
+        "closure": 2
+      }
+    },
+    {
+      "adapter": "kuzu",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 168.95
+      },
+      "results": {
+        "context": 1,
+        "impact": 2,
+        "routeShape": 1,
+        "closure": 2
+      }
+    },
+    {
+      "adapter": "cozo",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 55.88
+      },
+      "results": {
+        "context": 1,
+        "impact": 2,
+        "routeShape": 1,
+        "closure": 2
+      }
+    },
+    {
+      "adapter": "duckdb",
+      "ok": true,
+      "metrics": {
+        "elapsed_ms": 211.81
+      },
+      "results": {
+        "context": 1,
+        "impact": 2,
+        "routeShape": 1,
+        "closure": 2
+      }
+    }
+  ]
+}

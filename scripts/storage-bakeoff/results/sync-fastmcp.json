@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-04-12T08:48:53.012Z",
+  "repo": "/data/dev/goalx_test/repos/fastmcp",
+  "limitPerLayer": 1000000,
+  "artifacts": {
+    "canonical": 112,
+    "symmetry": 1667,
+    "closures": 492,
+    "abstractions": 59
+  },
+  "rowCounts": {
+    "canonical": 112,
+    "canonical_entry": 130,
+    "canonical_deviation": 754,
+    "symmetry": 1667,
+    "closure": 492,
+    "closure_member": 20070,
+    "abstraction": 59,
+    "abstraction_unit": 427
+  },
+  "timings": {
+    "parse_ms": 325.36,
+    "schema_ms": 5.02,
+    "insert_ms": 196.12,
+    "query_ms": 33,
+    "total_ms": 561.47
+  },
+  "queryResults": {
+    "highConfidenceCanonical": 31,
+    "largeClosures": 318,
+    "symmetryPartners": 0,
+    "abstractionTargets": 20
+  }
+}

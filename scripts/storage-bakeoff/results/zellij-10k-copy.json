@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-04-12T08:35:17.489Z",
+  "repo": "/data/dev/goalx_test/repos/zellij",
+  "maxNodes": 10000,
+  "maxEdges": 30000,
+  "loadMode": "copy",
+  "results": [
+    {
+      "adapter": "ladybug",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/main.rs:main",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 440.57
+      },
+      "results": {
+        "context": 19,
+        "impact": 65
+      }
+    },
+    {
+      "adapter": "kuzu",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/main.rs:main",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 808.62
+      },
+      "results": {
+        "context": 19,
+        "impact": 65
+      }
+    },
+    {
+      "adapter": "cozo",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/main.rs:main"
+      },
+      "metrics": {
+        "elapsed_ms": 522.41
+      },
+      "results": {
+        "context": 19,
+        "impact": 65
+      }
+    },
+    {
+      "adapter": "duckdb",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:src/main.rs:main"
+      },
+      "metrics": {
+        "elapsed_ms": 1766.02
+      },
+      "results": {
+        "context": 19,
+        "impact": 65
+      }
+    }
+  ]
+}

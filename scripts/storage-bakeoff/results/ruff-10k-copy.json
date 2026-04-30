@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-04-12T08:35:24.366Z",
+  "repo": "/data/dev/goalx_test/repos/ruff",
+  "maxNodes": 10000,
+  "maxEdges": 30000,
+  "loadMode": "copy",
+  "results": [
+    {
+      "adapter": "ladybug",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:python/ruff/_find_ruff.py:find_ruff_bin",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 381.45
+      },
+      "results": {
+        "context": 5,
+        "impact": 6
+      }
+    },
+    {
+      "adapter": "kuzu",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:python/ruff/_find_ruff.py:find_ruff_bin",
+        "loadMode": "copy"
+      },
+      "metrics": {
+        "elapsed_ms": 785.23
+      },
+      "results": {
+        "context": 5,
+        "impact": 6
+      }
+    },
+    {
+      "adapter": "cozo",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:python/ruff/_find_ruff.py:find_ruff_bin"
+      },
+      "metrics": {
+        "elapsed_ms": 503.88
+      },
+      "results": {
+        "context": 5,
+        "impact": 6
+      }
+    },
+    {
+      "adapter": "duckdb",
+      "ok": true,
+      "dataset": {
+        "nodes": 10000,
+        "edges": 30000,
+        "startNode": "Function:python/ruff/_find_ruff.py:find_ruff_bin"
+      },
+      "metrics": {
+        "elapsed_ms": 1738.25
+      },
+      "results": {
+        "context": 5,
+        "impact": 6
+      }
+    }
+  ]
+}

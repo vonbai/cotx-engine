@@ -1,0 +1,99 @@
+{
+  "name": "cotx-engine",
+  "version": "0.1.0",
+  "license": "BUSL-1.1",
+  "description": "Cognitive context engine — compiles codebases into persistent, queryable semantic maps",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "files": [
+    "dist",
+    "vendor/leiden",
+    "skills/cotx-enrich/SKILL.md",
+    "README.md"
+  ],
+  "bin": {
+    "cotx": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:engine": "node node_modules/typescript/bin/tsc && node node_modules/tsc-alias/dist/index.js",
+    "build:sdk": "node scripts/run-with-local-bins.mjs --npm run build --workspaces --if-present",
+    "build": "npm run build:engine && npm run build:sdk",
+    "dev": "tsc --watch",
+    "test:engine": "node node_modules/vitest/vitest.mjs run",
+    "test:sdk": "node scripts/run-with-local-bins.mjs --npm run test --workspaces --if-present",
+    "test": "npm run test:engine && npm run test:sdk",
+    "test:e2e:workbench": "node scripts/run-with-local-bins.mjs --npm run test:e2e --workspace apps/cotx-workbench",
+    "test:acceptance": "node scripts/run-with-local-bins.mjs vitest run --config vitest.acceptance.config.ts",
+    "benchmark:deterministic-matrix": "node scripts/run-deterministic-layer-matrix.mjs",
+    "benchmark:llm-smoke": "node scripts/run-agentic-llm-smoke.mjs",
+    "proof:deterministic-benchmark": "FAIL_ON_GAP=1 node scripts/run-deterministic-layer-matrix.mjs",
+    "proof:llm-benchmark": "FAIL_ON_NON_PASSING=1 node scripts/run-agentic-llm-smoke.mjs",
+    "proof:workflow:cli-mcp": "node scripts/run-with-local-bins.mjs vitest run test/commands/codrive.test.ts test/mcp/architecture-dispatch.test.ts test/mcp/doctrine-dispatch.test.ts test/mcp/prompts.test.ts",
+    "proof:workflow:ui-sdk": "node scripts/run-proof-workflow-ui-sdk.mjs",
+    "proof:workflow": "npm run proof:workflow:cli-mcp && npm run proof:workflow:ui-sdk",
+    "proof:quality-gates": "node scripts/run-proof-quality-gates.mjs",
+    "test:watch": "node node_modules/vitest/vitest.mjs",
+    "lint:engine": "node node_modules/typescript/bin/tsc --noEmit",
+    "lint:sdk": "node scripts/run-with-local-bins.mjs --npm run lint --workspaces --if-present",
+    "lint": "npm run lint:engine && npm run lint:sdk",
+    "pack:check": "npm pack --dry-run",
+    "verify": "npm run build && npm run lint && npm test && npm run test:acceptance && npm run pack:check"
+  },
+  "dependencies": {
+    "@ladybugdb/core": "^0.15.3",
+    "@mariozechner/pi-agent-core": "^0.66.1",
+    "@mariozechner/pi-ai": "^0.66.1",
+    "@mariozechner/pi-coding-agent": "^0.66.1",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "change-case": "^5.4.4",
+    "commander": "^12.0.0",
+    "cozo-node": "^0.7.6",
+    "elkjs": "^0.11.1",
+    "glob": "^11.0.0",
+    "graphology": "^0.25.4",
+    "graphology-communities-louvain": "^2.0.2",
+    "graphology-indices": "^0.17.0",
+    "graphology-utils": "^2.3.0",
+    "ignore": "^7.0.5",
+    "js-yaml": "^4.1.1",
+    "lru-cache": "^11.0.0",
+    "mnemonist": "^0.39.0",
+    "pandemonium": "^2.4.0",
+    "seedrandom": "^3.0.5",
+    "stopword": "^3.1.5",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-c": "0.23.2",
+    "tree-sitter-c-sharp": "^0.23.1",
+    "tree-sitter-cpp": "^0.23.4",
+    "tree-sitter-go": "^0.23.0",
+    "tree-sitter-java": "^0.23.5",
+    "tree-sitter-javascript": "^0.23.0",
+    "tree-sitter-php": "^0.23.0",
+    "tree-sitter-python": "0.23.4",
+    "tree-sitter-ruby": "^0.23.1",
+    "tree-sitter-rust": "0.23.1",
+    "tree-sitter-typescript": "^0.23.2",
+    "uuid": "^13.0.0",
+    "proper-lockfile": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "@types/seedrandom": "^3.0.8",
+    "@types/uuid": "^10.0.0",
+    "graphology-types": "^0.24.7",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.7.0",
+    "vite": "^7.3.2",
+    "vitest": "^3.0.0"
+  },
+  "overrides": {
+    "@mapbox/node-pre-gyp": "^2.0.3"
+  }
+}

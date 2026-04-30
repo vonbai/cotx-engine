@@ -1,0 +1,18 @@
+{
+  "id": "cotx-engine",
+  "project": "cotx-engine",
+  "compiled_at": "2026-04-09T10:30:00.000Z",
+  "workspaceLayout": {
+    "repoBoundaries": 1,
+    "packageBoundaries": 2,
+    "assetDirectories": 2,
+    "assetPaths": ["apps/web/public", "packages/ui/icons"]
+  },
+  "version": "0.1.0",
+  "stats": {
+    "modules": 12,
+    "concepts": 34,
+    "contracts": 8,
+    "flows": 5
+  }
+}
